@@ -123,10 +123,11 @@ networks:
         driver: bridge
 volumes:
     sail-pgsql:
-        external: true
-        # driver: local
+        # external: true
+        driver: local
     pgadmin:
-        external: true
+        driver: local
+        # external: true
     # sail-mysql:
     #     driver: local
     sail-redis:
