@@ -5,6 +5,11 @@
 		}
 	],
 	"settings": {
-		"terminal.integrated.defaultProfile.windows": "Ubuntu-20.04 (WSL)"
+		"terminal.integrated.defaultProfile.windows": "Ubuntu-20.04 (WSL)",
+		"markdown.preview.breaks": true,
+		"[markdown]": {
+			"editor.insertSpaces": true,
+			"editor.tabSize": 2,
+		},
 	}
 }
