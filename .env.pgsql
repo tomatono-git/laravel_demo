@@ -11,7 +11,7 @@ LOG_LEVEL=debug
 
 DB_CONNECTION=pgsql
 DB_HOST=pgsql
-DB_PORT=15432
+DB_PORT=5432
 DB_DATABASE=laravel_app
 DB_USERNAME=sail
 DB_PASSWORD=password
