@@ -59,7 +59,9 @@ services:
             PGADMIN_DEFAULT_PASSWORD: '${PGADMIN_PASSWORD}'
             PGADMIN_LISTEN_PORT: 81
         volumes:
-        - pgadmin:/var/lib/pgadmin
+        - sail-pgadmin:/var/lib/pgadmin
+        networks:
+            - sail
         hostname: pgadmin4
         depends_on: 
         - pgsql
@@ -127,7 +129,7 @@ volumes:
     sail-pgsql:
         # external: true
         driver: local
-    pgadmin:
+    sail-pgadmin:
         driver: local
         # external: true
     # sail-mysql:
