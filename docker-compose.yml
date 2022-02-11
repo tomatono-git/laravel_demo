@@ -46,6 +46,22 @@ services:
             test: ["CMD", "pg_isready", "-q", "-d", "${DB_DATABASE}", "-U", "${DB_USERNAME}"]
             retries: 3
             timeout: 5s
+        restart: always
+    pgadmin4:
+        image: dpage/pgadmin4
+        container_name: pgadmin4
+        ports:
+            - '${PGADMIN_PORT:-8081}:81'
+        environment:
+            PGADMIN_DEFAULT_EMAIL: '${PGADMIN_EMAIL}'
+            PGADMIN_DEFAULT_PASSWORD: '${PGADMIN_PASSWORD}'
+            PGADMIN_LISTEN_PORT: 81
+        volumes:
+        - pgadmin:/var/lib/pgadmin
+        hostname: pgadmin4
+        depends_on: 
+        - pgsql
+        restart: always
     # mysql:
     #     image: 'mysql/mysql-server:8.0'
     #     ports:
@@ -107,7 +123,10 @@ networks:
         driver: bridge
 volumes:
     sail-pgsql:
-        driver: local
+        external: true
+        # driver: local
+    pgadmin:
+        external: true
     # sail-mysql:
     #     driver: local
     sail-redis:
