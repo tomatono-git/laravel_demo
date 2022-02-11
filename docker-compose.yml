@@ -4,7 +4,8 @@ services:
     laravel.test:
         build:
             # Ubuntu 21.0 / PHP 8.1 / nodejs / DB関連 などがインストールされる
-            context: ./vendor/laravel/sail/runtimes/8.1
+            context: ./zz_docker/vendor/laravel/sail/runtimes/8.1
+            # context: ./vendor/laravel/sail/runtimes/8.1
             dockerfile: Dockerfile
             args:
                 WWWGROUP: '${WWWGROUP}'
