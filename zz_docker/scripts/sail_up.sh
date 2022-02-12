@@ -1,3 +1,4 @@
 #!/bin/bash
 
-./vendor/bin/sail up
+cd ../../
+sudo ./vendor/bin/sail up
