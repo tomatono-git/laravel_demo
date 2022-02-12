@@ -1,6 +1,6 @@
 {
     "name": "laravel.test",
-    "dockerComposeFile": "../docker/docker-compose.yml",
+    "dockerComposeFile": "../docker/laravel_demo/docker-compose.yml",
     "service": "laravel.test",
     "remoteUser": "sail",
     "workspaceFolder": "/home/sail",
