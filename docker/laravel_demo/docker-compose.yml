@@ -4,11 +4,12 @@ services:
     laravel.test:
         build:
             # Ubuntu 21.0 / PHP 8.1 / nodejs / DB関連 などがインストールされる
-            context: ./zz_ignore/vendor/laravel/sail/runtimes/8.1
-            # context: ./vendor/laravel/sail/runtimes/8.1
+            context: ../vendor/laravel/sail/runtimes/8.1
             dockerfile: Dockerfile
             args:
                 WWWGROUP: '${WWWGROUP}'
+        # env_file:
+        #     ./laravel_demo/.env
         image: sail-8.1/app
         extra_hosts:
             - 'host.docker.internal:host-gateway'
@@ -21,7 +22,6 @@ services:
             XDEBUG_CONFIG: '${SAIL_XDEBUG_CONFIG:-client_host=host.docker.internal}'
         volumes:
             - '.:/var/www/html'
-            - 'ignore_folder:/var/www/html/zz_ignore'
         networks:
             - sail
         depends_on:
@@ -138,4 +138,3 @@ volumes:
         driver: local
     sail-meilisearch:
         driver: local
-    ignore_folder:
