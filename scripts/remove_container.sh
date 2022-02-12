@@ -1,15 +1,17 @@
 #!/bin/bash
 
 # コンテナを強制削除
+docker rm --force `docker ps -aq`
 
-docker rm --force docker-laravel.test-1
-docker rm --force docker-mailhog-1
-docker rm --force docker-pgsql-1
-docker rm --force docker-redis-1
-docker rm --force docker-selenium-1
-docker rm --force docker-meilisearch-1
-docker rm --force docker-mailhog-1
-docker rm --force pgadmin4
+
+# docker rm --force docker-laravel.test-1
+# docker rm --force docker-mailhog-1
+# docker rm --force docker-pgsql-1
+# docker rm --force docker-redis-1
+# docker rm --force docker-selenium-1
+# docker rm --force docker-meilisearch-1
+# docker rm --force docker-mailhog-1
+# docker rm --force pgadmin4
 
 # docker rm --force example-app_laravel.test_1
 # docker rm --force example-app_pgsql_1
