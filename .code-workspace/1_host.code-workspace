@@ -3,20 +3,23 @@
 
     "folders": [
         {
-            "path": "."
+            "path": ".."
         },
         // {
-        //     "path": "/"
+        //     "path": "."
+        // },
+        // // {
+        // //     "path": "/"
+        // // },
+        // // {
+        // //     "path": "/home/tomato/laravel_demo"
+        // // },
+        // {
+        //     "path": "../.devcontainer"
         // },
         // {
-        //     "path": "/home/tomato/laravel_demo"
+        //     "path": "../docs"
         // },
-        {
-            "path": "../.devcontainer"
-        },
-        {
-            "path": "../docs"
-        },
     ],
 
     "settings": {
